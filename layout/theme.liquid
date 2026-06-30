@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple</title>
+    <link rel="icon" href="{{ 'three.ico' | asset_url }}" type="image/x-icon">
+    {{ content_for_header }}
+    <link rel="stylesheet" href="{{ 'styles.css' | asset_url }}">
+</head>
+<body>
+    {% section 'header' %}
+    
+<main id="main" role="main"> 
+    {{ content_for_layout }}
+</main>
+
+{% section 'footer' %}
+</body>
+</html>

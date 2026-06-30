@@ -1,0 +1,21 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {}
+    },
+    "grid": {
+      "type": "grid",
+      "settings": {}
+    },
+    "card": {
+      "type": "card",
+      "settings": {}
+    },
+    "slider": {
+      "type": "slider",
+      "settings": {}
+    }
+  },
+  "order": ["hero", "grid", "card", "slider"]
+}

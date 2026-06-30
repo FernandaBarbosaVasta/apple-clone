@@ -1,0 +1,20 @@
+{
+  "sections": {
+    "main": {
+      "type": "article",
+      "blocks": {
+        "newsletter": {
+          "type": "newsletter",
+          "settings": {}
+        },
+        "social-media": {
+          "type": "social_media",
+          "settings": {}
+        }
+      },
+      "block_order": ["newsletter", "social-media"],
+      "settings": {}
+    }
+  },
+  "order": ["main"]
+}
