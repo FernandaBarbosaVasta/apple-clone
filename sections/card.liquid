@@ -1,0 +1,242 @@
+<section>
+  <div class="card-grid">
+    <div class="card">
+
+    {%- if section.settings.image != blank -%}
+      <div class="card-image" style="background-image: url('{{ section.settings.image | image_url }}');"></div>
+    {%- else -%}
+      <div class="card-image" style="background-image: url('{{ 'seven.jpg' | asset_url }}');"></div>
+    {%- endif -%}
+      <div class="card-content">
+        <h3 class="card-title">{{ section.settings.title }}</h3>
+        <p class="card-description">{{ section.settings.description }}</p>
+        <a href="{{ section.settings.button_url }}" class="card-button">{{ section.settings.button_text }}</a>
+      </div>
+    </div>
+
+    
+
+    <div class="card">
+
+    {%- if section.settings.image2 != blank -%}
+      <div class="card-image" style="background-image: url('{{ section.settings.image2 | image_url }}');"></div>
+    {%- else -%}
+      <div class="card-image" style="background-image: url('{{ 'seven.jpg' | asset_url }}');"></div>
+    {%- endif -%}
+
+
+      <div class="card-content">
+        <h3 class="card-title">{{ section.settings.title2 }}</h3>
+        <p class="card-description">{{ section.settings.description2 }}</p>
+        <a href="{{ section.settings.button_url2 }}" class="card-button">{{ section.settings.button_text2 }}</a>
+      </div>
+    </div>
+
+    <div class="card">
+
+    {%- if section.settings.image3 != blank -%}
+      <div class="card-image" style="background-image: url('{{ section.settings.image3 | image_url }}');"></div>
+    {%- else -%}
+      <div class="card-image" style="background-image: url('{{ 'seven.jpg' | asset_url }}');"></div>
+    {%- endif -%}
+
+
+      <div class="card-content">
+        <h3 class="card-title">{{ section.settings.title3 }}</h3>
+        <p class="card-description">{{ section.settings.description3 }}</p>
+        <a href="{{ section.settings.button_url3 }}" class="card-button">{{ section.settings.button_text3 }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Container for the grid */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+    gap: 20px; /* Spacing between cards */
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding: 2px;
+
+  }
+
+  /* Card styling */
+  .card {
+    background-color: #fff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Hover effect */
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Card image */
+  .card-image {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Card content (title and description) */
+  .card-content {
+    padding: 20px;
+    flex-grow: 1;
+  }
+
+  /* Card title styling */
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  /* Card description styling */
+  .card-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+
+  /* Button styling */
+  .card-button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .card-button:hover {
+    background-color: #0056b3;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+        }
+  }
+
+  @media (max-width: 480px) {
+    .card-grid {
+      grid-template-columns: 1fr; /* 1 column on very small screens */
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "card",
+  "settings": [
+
+  {
+      "type": "image_picker",
+      "id": "image",
+      "label": "image",
+      "info": "400 x 120px .png recommended"
+    },
+    {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "image2",
+      "info": "400 x 120px .png recommended"
+    },
+    {
+      "type": "image_picker",
+      "id": "image3",
+      "label": "image3",
+      "info": "400 x 120px .png recommended"
+    },
+
+    {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text",
+            "default": "Button"
+            },
+            {
+            "type": "text",
+            "id": "title",
+            "label": "title",
+            "default": "title"
+            },
+            {
+            "type": "text",
+            "id": "title2",
+            "label": "title",
+            "default": "title"
+            },
+            {
+            "type": "text",
+            "id": "title3",
+            "label": "title",
+            "default": "title"
+            },
+            {
+            "type": "text",
+            "id": "description",
+            "label": "description",
+            "default": "description"
+            },
+            {
+            "type": "text",
+            "id": "description2",
+            "label": "description",
+            "default": "description"
+            },
+            {
+            "type": "text",
+            "id": "description3",
+            "label": "description",
+            "default": "description"
+            },
+            {
+             "type": "url",
+             "id": "button_url",
+             "label": "Button URL"
+             },
+
+             {
+            "type": "text",
+            "id": "button_text2",
+            "label": "Button Text",
+            "default": "Button"
+            },
+            {
+             "type": "url",
+             "id": "button_url2",
+             "label": "Button URL"
+             },
+             {
+            "type": "text",
+            "id": "button_text3",
+            "label": "Button Text",
+            "default": "Button"
+            },
+            {
+             "type": "url",
+             "id": "button_url3",
+             "label": "Button URL"
+             }
+
+  ],
+  "presets": [
+    {
+      "name": "card"
+    }
+  ]
+}
+{% endschema %}

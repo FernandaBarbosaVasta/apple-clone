@@ -3,6 +3,12 @@
     {{ form.errors | default_errors }}
 
     <div class="login-form">
+      <div class="form-image">
+        <img src="{{ 'three.ico' | asset_url }}" alt="Registration Image">
+      </div>
+      <h2 class="form-title">Welcome Back!</h2>
+
+
       <div class="email">
         <input
           placeholder="email"
@@ -24,12 +30,15 @@
         <input type="submit" value="Sign in">
       </div>
     </div>
+
+
+    
   {% endform %}
 </section>
 
 <style>
   .login-section {
-    background-color: rgb(226, 226, 226);
+    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,6 +50,7 @@
 
     text-align: center;
     max-width: 400px;
+    width: 400px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ddd;
@@ -56,7 +66,7 @@
 
   .login-form input {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 16px;
     box-sizing: border-box;
     border: 1px solid #ccc;

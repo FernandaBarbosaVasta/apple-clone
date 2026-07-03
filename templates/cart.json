@@ -7,18 +7,12 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-
-    {
-        "sections": {
-            "cart": {
-                "type": "cart",
-                "settings": {}
-              }
-       
-          },
-          "order": [
-            "cart"
-         
-          ]
-    
+{
+  "sections": {
+    "cart": {
+      "type": "cart",
+      "settings": {}
     }
+  },
+  "order": ["cart"]
+}
