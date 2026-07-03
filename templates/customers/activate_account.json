@@ -10,7 +10,7 @@
 {
     "sections": {
       "main": {
-        "type": "main-404",
+        "type": "main-customers-activate-account",
         "settings": {
         }
       }
@@ -18,4 +18,4 @@
     "order": [
       "main"
     ]
-}
+  }

@@ -7,15 +7,18 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
+
 {
     "sections": {
-      "main": {
-        "type": "main-404",
-        "settings": {
-        }
-      }
-    },
-    "order": [
-      "main"
-    ]
+        "search": {
+            "type": "search",
+            "settings": {}
+          }
+   
+      },
+      "order": [
+        "search"
+     
+      ]
+
 }

@@ -1,21 +1,40 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-  "sections": {
-    "hero": {
-      "type": "hero",
-      "settings": {}
+    "sections": {
+      "banner": {
+        "type": "banner",
+        "settings": {}
+      },
+      "three-images": {
+        "type": "three-images",
+        "settings": {}
+      },
+      "more-info": {
+        "type": "more-info",
+        "settings": {}
+      },
+      "all-collections": {
+        "type": "all-collections",
+        "settings": {}
+      },
+      "all-products": {
+        "type": "all-products",
+        "settings": {}
+      }
     },
-    "grid": {
-      "type": "grid",
-      "settings": {}
-    },
-    "card": {
-      "type": "card",
-      "settings": {}
-    },
-    "slider": {
-      "type": "slider",
-      "settings": {}
-    }
-  },
-  "order": ["hero", "grid", "card", "slider"]
-}
+    "order": [
+      "banner",
+      "three-images",
+      "more-info",
+      "all-collections",
+      "all-products"
+    ]
+  }
