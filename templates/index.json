@@ -11,7 +11,10 @@
   "sections": {
     "hero": {
       "type": "hero",
-      "settings": {}
+      "settings": {
+        "title_text": "Apple clone",
+        "description_text": "This is an Apple E-commerce Clone"
+      }
     },
     "grid": {
       "type": "grid",
@@ -19,12 +22,30 @@
     },
     "card": {
       "type": "card",
-      "settings": {}
+      "settings": {
+        "button_text": "Button",
+        "title": "title",
+        "title2": "title",
+        "title3": "title",
+        "description": "description",
+        "description2": "description",
+        "description3": "description",
+        "button_url": "",
+        "button_text2": "Button",
+        "button_url2": "",
+        "button_text3": "Button",
+        "button_url3": ""
+      }
     },
     "slider": {
       "type": "slider",
       "settings": {}
     }
   },
-  "order": ["hero", "grid", "card", "slider"]
+  "order": [
+    "hero",
+    "grid",
+    "card",
+    "slider"
+  ]
 }
