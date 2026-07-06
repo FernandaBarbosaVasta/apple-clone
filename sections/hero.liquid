@@ -26,7 +26,7 @@
       <div class="default">
         <div class="content-container">
           <h1>{{ section.settings.title_text }}</h1> <!-- Title -->
-          <p class="description">{{ section.settings.description_text }}</p> <!-- Description -->
+          <p class="description">{{ section.settings.description_text }}</p> <!-- Description -->  
         
 
           {%- if section.blocks.size == 0 -%}
@@ -54,7 +54,7 @@
 
 <style>
    .default {
-    background-image: url("{{ 'one.jpg' | asset_url }}");
+    background-image: url("{{ 'placeholder-hero.svg' | asset_url }}");
     width: 100%;
     height: 700px;
     background-size: cover;

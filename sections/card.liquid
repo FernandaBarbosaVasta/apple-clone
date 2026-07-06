@@ -5,7 +5,7 @@
     {%- if section.settings.image != blank -%}
       <div class="card-image" style="background-image: url('{{ section.settings.image | image_url }}');"></div>
     {%- else -%}
-      <div class="card-image" style="background-image: url('{{ 'seven.jpg' | asset_url }}');"></div>
+      <div class="card-image" style="background-image: url('{{ 'placeholder-card.svg' | asset_url }}');"></div>
     {%- endif -%}
       <div class="card-content">
         <h3 class="card-title">{{ section.settings.title }}</h3>
@@ -21,7 +21,7 @@
     {%- if section.settings.image2 != blank -%}
       <div class="card-image" style="background-image: url('{{ section.settings.image2 | image_url }}');"></div>
     {%- else -%}
-      <div class="card-image" style="background-image: url('{{ 'seven.jpg' | asset_url }}');"></div>
+      <div class="card-image" style="background-image: url('{{ 'placeholder-card.svg' | asset_url }}');"></div>
     {%- endif -%}
 
 
@@ -37,7 +37,7 @@
     {%- if section.settings.image3 != blank -%}
       <div class="card-image" style="background-image: url('{{ section.settings.image3 | image_url }}');"></div>
     {%- else -%}
-      <div class="card-image" style="background-image: url('{{ 'seven.jpg' | asset_url }}');"></div>
+      <div class="card-image" style="background-image: url('{{ 'placeholder-card.svg' | asset_url }}');"></div>
     {%- endif -%}
 
 
