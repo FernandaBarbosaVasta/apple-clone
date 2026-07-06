@@ -1,0 +1,90 @@
+<section>
+  <div class="carousel-container">
+    <div class="carousel">
+      <div class="image-one-c"></div>
+      <div class="image-one-c"></div>
+      <div class="image-one-c"></div>
+      <div class="image-one-c"></div>
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+</section>
+
+<style>
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+  }
+
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .image-one-c {
+    background-image: url("{{ 'ten.jpg' | asset_url }}");
+    background-size: cover;
+    background-position: center;
+    width: 900px; /* Set image width to 100px */
+    height: 400px; /* Adjust the height as needed */
+    flex-shrink: 0; /* Prevent images from shrinking */
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .prev {
+    left: 0;
+  }
+
+  .next {
+    right: 0;
+  }
+</style>
+
+<script>
+  let currentIndex = 0;
+
+  function moveSlide(direction) {
+    const carousel = document.querySelector('.carousel');
+    const totalSlides = document.querySelectorAll('.image-one').length;
+
+    currentIndex += direction;
+
+    if (currentIndex < 0) {
+      currentIndex = totalSlides - 1;
+    } else if (currentIndex >= totalSlides) {
+      currentIndex = 0;
+    }
+
+    const offset = -currentIndex * 120; // Move by 50% for each image
+    carousel.style.transform = `translateX(${offset}%)`;
+  }
+</script>
+
+{% schema %} 
+{
+    "name": "carousel",
+    "settings": [],
+    "presets": [
+        {
+        "name": "carousel"
+        }
+    ]
+}
+{% endschema %}

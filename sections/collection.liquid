@@ -1,0 +1,109 @@
+{% paginate collection.products by 8 %}
+    <section class="collection-sec">
+        {% comment %} <p>{{ collection.title }}</p> {% endcomment %}
+        <div class="carousel-container">
+          <div class="products-carousel">
+            {% for product in collection.products %}
+              <div class="product-card">
+                <img
+                  width="150"
+                  height="150"
+                  loading="lazy"
+                  src="{{ product.images[1] | image_url }}"
+                  alt="{{ product.title }}"
+                >
+                <a href="{{ product.url }}" class="product-link">
+                 {{ product.title }}
+                </a>
+              </div>
+            {% endfor %}
+          </div>
+      </div>
+    </section>
+  
+    {{ paginate | default_pagination }}
+  {% endpaginate %}
+  
+  <style>
+    .collection-sec {
+      background: {{ section.settings.background }};
+      color: {{ section.settings.text_color }};
+      padding: 10px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .carousel-container {
+      overflow: hidden; /* Hides the excess content that overflows */
+      width: 100%; /* Ensures the container takes full width */
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center; /* Centers the carousel */
+      
+    }
+  
+    .products-carousel {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 20px; /* Space between products */
+      transition: transform 0.3s ease; /* Smooth transition for sliding */
+    }
+  
+    .product-card {
+      text-align: center;
+      width: 100px; /* Fixed width for each product card */
+    }
+
+    .product-card a {
+      font-size: 14px;
+      margin-top: 10px;
+      color: black;
+      text-decoration: none;
+    }
+  
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    /* Optional: Style the pagination controls */
+    .pagination {
+      text-align: center;
+      margin-top: 20px;
+    }
+  
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .product-card {
+        width: 120px;
+      }
+    }
+  </style>
+  
+
+
+{% schema %}
+{
+  "name": "collection",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#000000"
+    }
+  ],
+  "presets": [
+    {
+      "name": "collection"
+    }
+  ]
+}
+{% endschema %}
