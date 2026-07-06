@@ -8,15 +8,14 @@
  * ------------------------------------------------------------
  */
 {
-  "sections": {
-    "collection": {
-      "type": "collection",
-      "settings": {}
+    "sections": {
+      "main": {
+        "type": "main-customers-order",
+        "settings": {
+        }
+      }
     },
-    "grid": {
-      "type": "grid",
-      "settings": {}
-    }
-  },
-  "order": ["collection", "grid"]
-}
+    "order": [
+      "main"
+    ]
+  }

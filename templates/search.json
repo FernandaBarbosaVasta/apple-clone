@@ -7,16 +7,18 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
+
 {
-  "sections": {
-    "collection": {
-      "type": "collection",
-      "settings": {}
-    },
-    "grid": {
-      "type": "grid",
-      "settings": {}
-    }
-  },
-  "order": ["collection", "grid"]
+    "sections": {
+        "search": {
+            "type": "search",
+            "settings": {}
+          }
+   
+      },
+      "order": [
+        "search"
+     
+      ]
+
 }
